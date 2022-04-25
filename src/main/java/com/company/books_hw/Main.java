@@ -13,7 +13,12 @@ public class Main {
         bookTable.add(new Books(3, "Where the Crowdads Sing", 12.09f));
         bookTable.add(new Books(4, "Fangirl", 14.19f));
         bookTable.add(new Books(5, "Call Me By Your Name", 15.39f));
-
+        
+         for (int i = 0; i <bookTable.size(); i++) {
+            if (Books.greaterThan()==false){
+                bookTable.remove(i);
+            }
+        }
         System.out.println(bookTable);
 
     }
