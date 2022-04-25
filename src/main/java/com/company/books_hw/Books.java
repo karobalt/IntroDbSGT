@@ -28,4 +28,12 @@ public class Books {
         return "Book ID: " + this.getId() + "; book name: " + getName()
                 + "; book price: " + getPrice() + ";\n";
     }
+    
+    public static boolean greaterThan() {
+        boolean flag = true;
+        if (this.getPrice() < 10f) {
+            flag = false;
+        }
+        return flag;
+    }
 }
