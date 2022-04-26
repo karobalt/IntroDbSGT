@@ -8,6 +8,8 @@ public class Students {
     private String name;
     private int age;
 
+
+    public Students(){}
     // Define constructor
     public Students(int id, String name, int age) {
         this.id=id;
