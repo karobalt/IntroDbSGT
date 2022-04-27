@@ -71,6 +71,49 @@ public class StudentController {
             return null;
         }
     }
+    public static boolean addStudentScores() {
+        // Prompt the user for data
+        System.out.println("Enter the id of the student you want to add scores to: ");
+        int id = scanner.nextInt();
+        System.out.println("Enter the students score for mathematics: ");
+        int mathematics = scanner.nextInt();
+        System.out.println("Enter the students score for english: ");
+        int english = scanner.nextInt();
+        System.out.println("Enter the students score for physics: ");
+        int physics = scanner.nextInt();
+        System.out.println("Enter the students score for chemistry: ");
+        int chemistry = scanner.nextInt();
+
+        try {
+            ps = getConnection().prepareStatement("INSERT INTO scores(studentid, mathematics, english, physics, chemistry) VALUES(" + id + "," + mathematics + "," + english + "," + physics + "," + chemistry + ")");
+            ps.execute(); //execute the sql command
+            return true; // return true if successful
+        } catch (SQLException e) {
+            System.out.println("Database Error");
+            return false;
+
+        }
+
+    }
+
+    public static boolean deleteScore() {
+        // Prompt the user for data
+        System.out.println("Enter the id of the student whose score you want delete: ");
+        int studentid = scanner.nextInt();
+
+        try {
+            // DELETE FROM Books WHERE id = id;
+            ps = getConnection().prepareStatement("DELETE FROM scores WHERE studentid=" + studentid);
+
+            ps.execute(); //execute the sql command
+            return true; // return true if successful
+        } catch (SQLException e) {
+            System.out.println("Database Error");
+            return false;
+
+        }
+
+    }
 
     }
 
