@@ -15,6 +15,10 @@ public class BookMenu {
         System.out.println("2. Get book by id");
         System.out.println("3. Edit book name by id");
         System.out.println("4. Delete book by id");
+        System.out.println("5. Edit students specific subjects score");
+        System.out.println("6. Delete students score if student is deleted from database");
+
+
 
         System.out.println("Select and option: ");
         int option = scanner.nextInt();
@@ -32,6 +36,8 @@ public class BookMenu {
             case 4:
                 System.out.println(BookController.deleteBook() ? "Book successfully deleted" : "Book was not deleted");
                 break;
+            case 5:
+                System.out.println();
             default:
                 System.out.println("Invalid option. Try again");
                 menu();

@@ -37,8 +37,8 @@ public class Books {
         this.price = price;
     }
 
-   // public String toString (){
-     //   return "Book ID: " + this.getId() + "; book name: " + getName()
-     //           + "; book price: " + getPrice() + ";\n";
-    //}
+//    public String toString (){
+//        return "Book ID: " + this.getId() + "; book name: " + getName()
+//                + "; book price: " + getPrice() + ";\n";
+//    }
 }
