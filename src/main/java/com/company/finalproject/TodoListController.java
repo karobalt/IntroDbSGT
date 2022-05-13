@@ -1,13 +1,11 @@
-package com.company.controllers;
-import com.company.dbhelper.DbConnection;
-import com.company.menu.TodoListMenu;
+package com.company.finalproject;
 
 
 import java.util.Scanner;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import static com.company.dbhelper.DbConnection.getConnection;
+import static com.company.finalproject.DbConnection.getConnection;
 
 public class TodoListController {
     // initialize the scanner
